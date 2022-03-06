@@ -4,11 +4,25 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/nav.css" />
         <link rel="stylesheet" href="/css/main.css" />
         <link rel="stylesheet" href="/css/profile.css" />
+        <link rel="stylesheet" href="/css/music.css" />
+        <link rel="stylesheet" href="/css/merch.css" />
         <title>PREP</title>
     </head>
     <body>
+        <header>
+            <nav id="nav">
+                <img src="./img/logo.png" id="navLogo" />
+                <ul id="gnb">
+                    <li><a id="gnbMain" href="#main">MAIN</a></li>
+                    <li><a id="gnbProfile" href="#profile">PROFILE</a></li>
+                    <li><a id="gnbMusic" href="#music">MUSIC</a></li>
+                    <li><a id="gnbMerch" href="#merch">MERCH</a></li>
+                </ul>
+            </nav>
+        </header>
         <div id="main">
             <img id="MainImg" src="./img/main.jpg" alt="" />
             <img
@@ -29,8 +43,109 @@
             </div>
         </div>
         <div id="profile">
-            <img id="profileImg" src="./img/profile.jpg" alt="" />
+            <h1>Profile</h1>
+            <div id="wrapContents">
+                <div id="wrapProfileL">
+                    <img id="profileImg" src="./img/profile.jpg" alt="" />
+                    <div id="memberImgArea">
+                        <div id="Llywelyn_Ap_Myrddin"></div>
+                        <div id="Tom_Havelock"></div>
+                        <div id="Guillaume_Jambel"></div>
+                        <div id="Dan_Radclyffe"></div>
+                    </div>
+                    <div id="aboutMember">
+                        <img
+                            id="aboutMemberImg"
+                            src="./img/members/Llywelyn_Ap_Myrddin.jpg"
+                            alt=""
+                        />
+                        <p id="aboutMemberName">Llywelyn Ap Myrddin</p>
+                    </div>
+                    <div id="desc">
+                        <img id="decPrepImg" src="./img/logo.png" alt="" />
+                        <div id="about">
+                            전세계 힙스터에게 가장 많은 사랑을 받고 있는
+                            아티스트라 해도 과언이 아닐 4인조 브리티쉬 밴드
+                            프렙(PREP).<br />
+                            그들의 음악을 인플래닛을 통해 한국의 모든 음원
+                            사이트에서도 감상할 수 있다.<br />
+                            2015년 데뷔 이래 발매한 싱글들은 사운드클라우드와
+                            스포티파이 등의 해외 스트리밍 서비스를 통해 높은
+                            스트리밍 횟수를 기록했다
+                        </div>
+                    </div>
+                </div>
+                <!-- <div id="wrapProfileR">
+                    <h1>Dan_Radclyffe</h1>
+                    <img
+                        id="profileImg"
+                        src="./img/members/Dan_Radclyffe.jpg"
+                        alt=""
+                    />
+                </div>
+                <div id="wrapProfileL">
+                    <h1>Guillaume_Jambel</h1>
+                    <img
+                        id="profileImg"
+                        src="./img/members/Guillaume_Jambel.jpg"
+                        alt=""
+                    />
+                </div>
+                <div id="wrapProfileR">
+                    <h1>Llywelyn_Ap_Myrddin</h1>
+                    <img
+                        id="profileImg"
+                        src="./img/members/Llywelyn_Ap_Myrddin.jpg"
+                        alt=""
+                    />
+                </div>
+                <div id="wrapProfileL">
+                    <h1>Tom_Havelock</h1>
+                    <img
+                        id="profileImg"
+                        src="./img/members/Tom_Havelock.jpg"
+                        alt=""
+                    />
+                </div> -->
+            </div>
+        </div>
+        <div id="music">
+            <h1>Music</h1>
+            <div id="musicList">
+                <button id="prevButton" type="button">
+                    <img src="./img/left.png" alt="" />
+                </button>
+                <div id="musicWrap">
+                    <img
+                        id="albumCover"
+                        src="./img/album/the_kid.jfif"
+                        alt=""
+                    />
+                    <iframe
+                        id="youtube"
+                        src=""
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
+                    <div id="LP">
+                        <img id="LPImg" src="./img/album/the_kid.jfif" />
+                        <div id="LPHole"></div>
+                    </div>
+                </div>
+                <button id="nextButton" type="button">
+                    <img src="./img/right.png" alt="" />
+                </button>
+            </div>
+        </div>
+        <div id="merch">
+            <h1>Merch</h1>
         </div>
         <script src="/js/main.js"></script>
+        <script src="/js/profile.js"></script>
+        <script src="/js/music.js"></script>
+        <script src="/js/merch.js"></script>
+        <script src="/js/nav.js"></script>
     </body>
 </html>
