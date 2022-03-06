@@ -1,21 +1,25 @@
 const logo = document.getElementById("LogoImg");
 const profile = document.getElementById("profile");
+const music = document.getElementById("music");
+const merch = document.getElementById("merch");
 function clickLogo() {
     logo.style.transform = "rotate(0deg)";
     logo.style.width = "60%";
     logo.style.height = "60vh";
-    document.getElementById("square1").style.top = "0";
-    document.getElementById("square2").style.top = "0";
-    document.getElementById("square3").style.top = "0";
-    document.getElementById("square4").style.top = "0";
-    document.getElementById("square5").style.top = "0";
-    document.getElementById("square6").style.top = "0";
-    document.getElementById("square7").style.top = "0";
-    document.getElementById("square8").style.top = "0";
+    setTimeout(() => {
+        for (let index = 1; index < 9; index++) {
+            document.getElementById(`square${index}`).style.top = "0";
+        }
+    }, 300);
 
-    setTimeout(function () {
+    setTimeout(() => {
         profile.style.display = "flex";
-        window.scroll({ top: profile.offsetTop, behavior: "smooth" });
+        music.style.display = "flex";
+        merch.style.display = "flex";
+        window.scroll({ top: profile.offsetTop });
+    }, 2100);
+    setTimeout(() => {
         document.getElementById("goToNextPage").style.display = "none";
-    }, 1800);
+    }, 3400);
 }
+console.log(window.pageYOffset);
