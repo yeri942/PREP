@@ -1,0 +1,105 @@
+#profile {
+    /* padding-top: 5.3%; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    display: none;
+    background-color: #151376;
+}
+#profile > h1 {
+    transform: translateY(-34vh);
+    position: absolute;
+    font-size: 45vh;
+    color: rgba(0, 0, 0, 0.418);
+}
+#wrapContents {
+    width: 100%;
+    height: 60%;
+    margin-top: 36vh;
+}
+#wrapProfileL {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+/* #wrapProfileR {
+    width: 100%;
+    height: 60vh;
+} */
+#profileImg {
+    position: relative;
+    width: 75%;
+    height: 100%;
+    object-fit: cover;
+}
+#memberImgArea {
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    left: 0;
+}
+#Llywelyn_Ap_Myrddin {
+    position: absolute;
+    left: 0;
+    width: 25%;
+    height: 80vh;
+}
+#Tom_Havelock {
+    position: absolute;
+    left: 25%;
+    width: 27%;
+    height: 80vh;
+}
+#Guillaume_Jambel {
+    position: absolute;
+    left: 52%;
+    width: 27%;
+    height: 80vh;
+}
+#Dan_Radclyffe {
+    position: absolute;
+    left: 79%;
+    width: 21%;
+    height: 80vh;
+}
+#aboutMember {
+    position: absolute;
+    display: none;
+}
+#aboutMember img {
+    width: 20vh;
+    box-shadow: 1.3vh 1.3vh 0 rgba(0, 0, 0, 0.308);
+}
+#aboutMember p {
+    font-size: 2vh;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    padding: 1.5%;
+    background-color: rgb(0, 0, 0);
+    transform: translateX(5vh) translateY(-5vh);
+    /* box-shadow: 10px 10px 10px red; */
+}
+#desc {
+    display: flex;
+    width: 25%;
+    height: 100%;
+    background-color: rgb(255, 196, 0);
+    flex-wrap: wrap;
+    align-content: space-around;
+    z-index: 10;
+}
+
+#decPrepImg {
+    height: 10%;
+    object-fit: cover;
+    margin: 10%;
+}
+h1 {
+    font-size: 2vw;
+}
+#about {
+    margin: 10%;
+    font-size: 1.1vw;
+}
