@@ -1,0 +1,85 @@
+#music {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #151376;
+    color: whitesmoke;
+}
+#musicList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+#musicList button {
+    background-color: transparent;
+    border: none;
+}
+#musicList button img {
+    width: 3vw;
+    height: 3vw;
+    cursor: pointer;
+}
+
+#musicWrap {
+    width: 45vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 10%;
+    transition-duration: 0.5s;
+}
+#musicWrap.active {
+    width: 90vh;
+}
+#albumCover {
+    width: 45vh;
+    z-index: 80;
+    cursor: pointer;
+}
+iframe {
+    display: none;
+    width: 45vh;
+    height: 45vh;
+    z-index: 88;
+}
+#LP {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    right: 0;
+    width: 42vh;
+    height: 42vh;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.644);
+    align-items: center;
+    margin-left: 0;
+    cursor: pointer;
+}
+.rotateLP {
+    animation: rotate 10s linear infinite;
+    transform-origin: 50% 50%;
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+#LPImg {
+    position: relative;
+    width: 18vh;
+    height: 18vh;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+#LPHole {
+    position: absolute;
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50%;
+    opacity: 0.8;
+    background-color: black;
+}
