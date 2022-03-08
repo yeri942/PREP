@@ -4,8 +4,22 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #151376;
+    background: linear-gradient(#5b59c2, #7d3fa6);
     color: whitesmoke;
+}
+#music #title {
+    left: 4vh;
+    transform: translateY(-34vh);
+    position: absolute;
+    font-size: 20vh;
+    color: rgba(192, 192, 192, 0.418);
+}
+#musicTitle {
+    right: 4vh;
+    transform: translateY(34vh);
+    position: absolute;
+    font-size: 20vh;
+    color: rgba(192, 192, 192, 0.24);
 }
 #musicList {
     display: flex;
@@ -25,7 +39,7 @@
 }
 
 #musicWrap {
-    width: 45vh;
+    width: 55vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -33,17 +47,17 @@
     transition-duration: 0.5s;
 }
 #musicWrap.active {
-    width: 90vh;
+    width: 110vh;
 }
 #albumCover {
-    width: 45vh;
+    width: 55vh;
     z-index: 80;
     cursor: pointer;
 }
 iframe {
     display: none;
-    width: 45vh;
-    height: 45vh;
+    width: 55vh;
+    height: 55vh;
     z-index: 88;
 }
 #LP {
@@ -51,8 +65,8 @@ iframe {
     display: flex;
     justify-content: center;
     right: 0;
-    width: 42vh;
-    height: 42vh;
+    width: 50vh;
+    height: 50vh;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.644);
     align-items: center;
@@ -70,8 +84,8 @@ iframe {
 }
 #LPImg {
     position: relative;
-    width: 18vh;
-    height: 18vh;
+    width: 22vh;
+    height: 22vh;
     border-radius: 50%;
     opacity: 0.8;
 }
