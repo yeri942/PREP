@@ -1,26 +1,27 @@
 #profile {
-    /* padding-top: 5.3%; */
+    padding-bottom: 5.3%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     /* height: 100vh; */
     display: none;
-    background-color: #151376;
+    background: linear-gradient(#151376, #5b59c2);
 }
 #profile > h1 {
-    transform: translateY(-34vh);
+    transform: translateY(-32vh);
+    left: 4vh;
     position: absolute;
-    font-size: 45vh;
-    color: rgba(0, 0, 0, 0.418);
+    font-size: 20vh;
+    color: rgba(192, 192, 192, 0.418);
 }
 #wrapContents {
     width: 100%;
     height: 60%;
-    margin-top: 36vh;
+    margin-top: 28vh;
 }
 #wrapProfileL {
     width: 100%;
-    height: 80vh;
+    height: 72vh;
     display: flex;
     justify-content: center;
 }
@@ -33,6 +34,8 @@
     width: 75%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
+    filter: grayscale(1);
 }
 #memberImgArea {
     position: absolute;
@@ -44,29 +47,30 @@
     position: absolute;
     left: 0;
     width: 25%;
-    height: 80vh;
+    height: 72vh;
 }
 #Tom_Havelock {
     position: absolute;
     left: 25%;
     width: 27%;
-    height: 80vh;
+    height: 72vh;
 }
 #Guillaume_Jambel {
     position: absolute;
     left: 52%;
     width: 27%;
-    height: 80vh;
+    height: 72vh;
 }
 #Dan_Radclyffe {
     position: absolute;
     left: 79%;
     width: 21%;
-    height: 80vh;
+    height: 72vh;
 }
 #aboutMember {
     position: absolute;
     display: none;
+    z-index: 1;
 }
 #aboutMember img {
     width: 20vh;
@@ -85,16 +89,17 @@
     display: flex;
     width: 25%;
     height: 100%;
-    background-color: rgb(255, 196, 0);
+    background-color: #00000000;
     flex-wrap: wrap;
-    align-content: space-around;
-    z-index: 10;
+    align-content: flex-end;
+    color: whitesmoke;
 }
 
 #decPrepImg {
     height: 10%;
     object-fit: cover;
     margin: 10%;
+    filter: grayscale(1) invert(100%);
 }
 h1 {
     font-size: 2vw;
