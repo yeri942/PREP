@@ -13,40 +13,36 @@ const memberList = [
     { src: "Guillaume_Jambel", name: "Guillaume Jambel" },
     { src: "Dan_Radclyffe", name: "Dan Radclyffe" },
 ];
-memberImgArea.addEventListener("mouseover", (e) => {
-    console.log(2222);
-});
+
+const aboutMemberStyle = (e) => {
+    aboutMember.style.display = "block";
+    aboutMember.style.left = e.clientX + 10 + "px";
+    aboutMember.style.top = window.pageYOffset + e.clientY + 20 + "px";
+    console.log(e.clientY / screen.height);
+};
 memberImgArea.addEventListener("mouseout", (e) => {
     aboutMember.style.display = "none";
 });
 member1.addEventListener("mousemove", (e) => {
     aboutMemberImg.src = `./img/members/${memberList[0].src}.jpg`;
     aboutMemberName.textContent = memberList[0].name;
-    aboutMember.style.display = "block";
-    aboutMember.style.left = e.clientX - 10 + "px";
-    aboutMember.style.top = memberImgArea.offsetTop + e.clientY - 120 + "px";
+    aboutMemberStyle(e);
 });
 
 member2.addEventListener("mousemove", (e) => {
     aboutMemberImg.src = `./img/members/${memberList[1].src}.jpg`;
     aboutMemberName.textContent = memberList[1].name;
-    aboutMember.style.display = "block";
-    aboutMember.style.left = e.clientX - 10 + "px";
-    aboutMember.style.top = memberImgArea.offsetTop + e.clientY - 120 + "px";
+    aboutMemberStyle(e);
 });
 
 member3.addEventListener("mousemove", (e) => {
     aboutMemberImg.src = `./img/members/${memberList[2].src}.jpg`;
     aboutMemberName.textContent = memberList[2].name;
-    aboutMember.style.display = "block";
-    aboutMember.style.left = e.clientX - 2 + "px";
-    aboutMember.style.top = memberImgArea.offsetTop + e.clientY - 120 + "px";
+    aboutMemberStyle(e);
 });
 
 member4.addEventListener("mousemove", (e) => {
     aboutMemberImg.src = `./img/members/${memberList[3].src}.jpg`;
     aboutMemberName.textContent = memberList[3].name;
-    aboutMember.style.display = "block";
-    aboutMember.style.left = e.clientX - 10 + "px";
-    aboutMember.style.top = memberImgArea.offsetTop + e.clientY - 120 + "px";
+    aboutMemberStyle(e);
 });
