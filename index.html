@@ -4,11 +4,18 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
         <link rel="stylesheet" href="/css/nav.css" />
         <link rel="stylesheet" href="/css/main.css" />
         <link rel="stylesheet" href="/css/profile.css" />
         <link rel="stylesheet" href="/css/music.css" />
         <link rel="stylesheet" href="/css/merch.css" />
+        <link rel="stylesheet" href="/css/connect.css" />
+        <link rel="stylesheet" href="/css/footer.css" />
+
         <title>PREP</title>
     </head>
     <body>
@@ -16,13 +23,15 @@
             <nav id="nav">
                 <img src="./img/logo.png" id="navLogo" />
                 <ul id="gnb">
-                    <li><a id="gnbMain" href="#main">MAIN</a></li>
-                    <li><a id="gnbProfile" href="#profile">PROFILE</a></li>
-                    <li><a id="gnbMusic" href="#music">MUSIC</a></li>
-                    <li><a id="gnbMerch" href="#merch">MERCH</a></li>
+                    <li><a id="gnbMain">MAIN</a></li>
+                    <li><a id="gnbProfile">PROFILE</a></li>
+                    <li><a id="gnbMusic">MUSIC</a></li>
+                    <li><a id="gnbMerch">MERCH</a></li>
+                    <li><a id="gnbConnect">CONNECT</a></li>
                 </ul>
             </nav>
         </header>
+
         <div id="main">
             <img id="MainImg" src="./img/main.jpg" alt="" />
             <img
@@ -75,38 +84,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div id="wrapProfileR">
-                    <h1>Dan_Radclyffe</h1>
-                    <img
-                        id="profileImg"
-                        src="./img/members/Dan_Radclyffe.jpg"
-                        alt=""
-                    />
-                </div>
-                <div id="wrapProfileL">
-                    <h1>Guillaume_Jambel</h1>
-                    <img
-                        id="profileImg"
-                        src="./img/members/Guillaume_Jambel.jpg"
-                        alt=""
-                    />
-                </div>
-                <div id="wrapProfileR">
-                    <h1>Llywelyn_Ap_Myrddin</h1>
-                    <img
-                        id="profileImg"
-                        src="./img/members/Llywelyn_Ap_Myrddin.jpg"
-                        alt=""
-                    />
-                </div>
-                <div id="wrapProfileL">
-                    <h1>Tom_Havelock</h1>
-                    <img
-                        id="profileImg"
-                        src="./img/members/Tom_Havelock.jpg"
-                        alt=""
-                    />
-                </div> -->
             </div>
         </div>
         <div id="music">
@@ -142,11 +119,192 @@
         </div>
         <div id="merch">
             <h1>Merch</h1>
+            <div id="wrapMerch">
+                <div id="merchBtn">
+                    <button id="merchPrevButton" type="button">
+                        <img src="./img/left.png" alt="" />
+                    </button>
+                    <button id="merchNextButton" type="button">
+                        <img src="./img/right.png" alt="" />
+                    </button>
+                </div>
+                <div id="musicMerch" onclick="musicMerchCoverClick()">
+                    <div id="musicMerchCover">Music</div>
+
+                    <img
+                        id="musicMerchImg"
+                        src="./img/musicMerch.webp"
+                        alt=""
+                        srcset=""
+                    />
+                    <div id="musicMerchList">
+                        <div class="musicMerch01 musicMerchs">
+                            <a
+                                href="https://prepofficial.com/collections/music/products/prep-ep-cd"
+                                target="_blank"
+                            >
+                                <img
+                                    id="merchImg"
+                                    src="./img/merch/musicMerch01.jpg"
+                                    alt=""
+                                />
+                            </a>
+                            <div id="merchName">PREP Digipack (CD)</div>
+                        </div>
+                        <div class="musicMerch02 musicMerchs">
+                            <a
+                                href="https://prepofficial.com/collections/music/products/line-by-line-12-ep-blue"
+                                target="_blank"
+                            >
+                                <img
+                                    id="merchImg"
+                                    src="./img/merch/musicMerch02.jpg"
+                                    alt=""
+                                />
+                            </a>
+                            <div id="merchName">
+                                Line by Line (12" EP) - Blue
+                            </div>
+                        </div>
+                        <div class="musicMerch03 musicMerchs">
+                            <a
+                                href="https://prepofficial.com/collections/music/products/cold-fire-12-ep-red"
+                                target="_blank"
+                            >
+                                <img
+                                    id="merchImg"
+                                    src="./img/merch/musicMerch03.jpg"
+                                    alt=""
+                                />
+                            </a>
+                            <div id="merchName">Cold Fire (12" EP) - Red</div>
+                        </div>
+                        <div class="musicMerch04 musicMerchs">
+                            <a
+                                href="https://prepofficial.com/collections/music/products/prep-lp-12-black"
+                                target="_blank"
+                            >
+                                <img
+                                    id="merchImg"
+                                    src="./img/merch/musicMerch04.jpg"
+                                    alt=""
+                                />
+                            </a>
+                            <div id="merchName">PREP LP (12") - Black</div>
+                        </div>
+                        <div class="musicMerch05 musicMerchs">
+                            <a
+                                href="https://prepofficial.com/collections/music/products/prep-prep-limited-edition-translucent-orange-vinyl"
+                                target="_blank"
+                            >
+                                <img
+                                    id="merchImg"
+                                    src="./img/merch/musicMerch05.jpg"
+                                    alt=""
+                                />
+                            </a>
+                            <div id="merchName">
+                                PREP - LP (12") Limited Edition Translucent
+                                Orange
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="accMerch" onclick="accMerchCoverClick()">
+                    <div id="accMerchCover">Accessories</div>
+                    <img
+                        id="accMerchImg"
+                        src="./img/accMerch.png"
+                        alt=""
+                        srcset=""
+                    />
+                    <div id="accMerchList">
+                        <div class="accMerch01 accMerchs">
+                            <img
+                                id="merchImg"
+                                src="./img/merch/accMerch01.webp"
+                                alt=""
+                            />
+                            <div id="merchName">PREP - T Shirt</div>
+                        </div>
+                        <div class="accMerch02 accMerchs">
+                            <img
+                                id="merchImg"
+                                src="./img/merch/accMerch02.webp"
+                                alt=""
+                            />
+                            <div id="merchName">PREP - Long Sleeve</div>
+                        </div>
+                        <div class="accMerch03 accMerchs">
+                            <img
+                                id="merchImg"
+                                src="./img/merch/accMerch03.webp"
+                                alt=""
+                            />
+                            <div id="merchName">PREP Cap</div>
+                        </div>
+                        <div class="accMerch04 accMerchs">
+                            <img
+                                id="merchImg"
+                                src="./img/merch/accMerch04.webp"
+                                alt=""
+                            />
+                            <div id="merchName">PREP Luxury Beach Towel</div>
+                        </div>
+                        <div class="accMerch05 accMerchs">
+                            <img
+                                id="merchImg"
+                                src="./img/merch/accMerch05.webp"
+                                alt=""
+                            />
+                            <div id="merchName">PREP - Socks</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="closeBtn" type="button" onclick="closeBtnClick()">
+                    <img src="/img/close.png" alt="" />
+                </button>
+            </div>
         </div>
+        <div id="connect">
+            <h1>Connect</h1>
+            <div id="connectContent">
+                <a href="https://www.facebook.com/prepband" target="_blank">
+                    <div class="sns facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/prepband" target="_blank">
+                    <div class="sns instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </a>
+                <a
+                    href="https://www.youtube.com/channel/UCphD5BdaBNVJxbH8XZKLDqg"
+                    target="_blank"
+                >
+                    <div class="sns youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </a>
+                <a href="https://twitter.com/prep_band" target="_blank">
+                    <div class="sns twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <footer>
+            <div>create by YeriKim</div>
+            <a href="https://github.com/yeri942/PREP" target="_blank">
+                <img src="./img/github.png" alt="" id="github"
+            /></a>
+        </footer>
+        <script src="/js/nav.js"></script>
         <script src="/js/main.js"></script>
         <script src="/js/profile.js"></script>
         <script src="/js/music.js"></script>
         <script src="/js/merch.js"></script>
-        <script src="/js/nav.js"></script>
     </body>
 </html>
