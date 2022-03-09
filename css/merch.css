@@ -4,6 +4,156 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #151376;
+    background: linear-gradient(#7d3fa6, #f2de74);
     color: whitesmoke;
+    padding-bottom: 5.3%;
+}
+#merch h1 {
+    left: 4vh;
+    transform: translateY(-34vh);
+    position: absolute;
+    font-size: 20vh;
+    color: rgba(192, 192, 192, 0.418);
+}
+#wrapMerch {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 60%;
+    transform: translateY(10vh);
+}
+#musicMerch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(255, 199, 94);
+    transition-duration: 0.5s;
+}
+#musicMerch img {
+    height: 100%;
+    object-fit: cover;
+}
+#musicMerch #musicMerchCover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 10vh;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+#musicMerch #musicMerchCover:hover {
+    font-size: 12vh;
+}
+#accMerch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(35, 153, 199);
+    transition-duration: 0.5s;
+}
+#accMerch img {
+    height: 80%;
+    object-fit: cover;
+}
+#accMerch #accMerchCover {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 10vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+#accMerch #accMerchCover:hover {
+    font-size: 12vh;
+}
+
+#closeBtn {
+    display: none;
+    width: 3vh;
+    height: 3vh;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 2vh;
+    right: 3vh;
+    cursor: pointer;
+}
+#closeBtn img {
+    width: 3vh;
+    height: 3vh;
+}
+#musicMerchList,
+#accMerchList {
+    display: none;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 3vh;
+    z-index: 10;
+}
+#musicMerchList .musicMerchs {
+    font-size: 1.8vh;
+    margin: 0 3%;
+    color: rgb(48, 48, 48);
+    transform: translateX(18vh);
+    transition-duration: 0.5s;
+}
+#musicMerchList img {
+    width: 28vh;
+    height: 28vh;
+}
+#merchBtn {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#merchPrevButton,
+#merchNextButton {
+    display: none;
+    background-color: transparent;
+    border: none;
+    width: 8vh;
+    height: 8vh;
+    cursor: pointer;
+    z-index: 5;
+}
+#merchPrevButton img,
+#merchNextButton img {
+    width: 8vh;
+    height: 8vh;
+}
+#merchPrevButton {
+    opacity: 0.3;
+}
+#merchNextButton {
+    margin-right: 1vh;
+}
+#accMerchList .accMerchs {
+    font-size: 1.8vh;
+    margin: 0 3%;
+    color: rgb(48, 48, 48);
+    transform: translateX(18vh);
+    transition-duration: 0.5s;
+}
+#accMerchList img {
+    width: 28vh;
+    height: 28vh;
 }
