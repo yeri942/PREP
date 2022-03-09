@@ -4,7 +4,7 @@ const music = document.getElementById("music");
 const merch = document.getElementById("merch");
 const connect = document.getElementById("connect");
 const footer = document.getElementsByTagName("footer");
-function clickLogo() {
+clickLogo = () => {
     logo.style.transform = "rotate(0deg)";
     logo.style.width = "60%";
     logo.style.height = "60vh";
@@ -25,5 +25,4 @@ function clickLogo() {
     setTimeout(() => {
         document.getElementById("goToNextPage").style.display = "none";
     }, 3400);
-}
-console.log(window.pageYOffset);
+};

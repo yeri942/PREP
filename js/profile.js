@@ -18,7 +18,6 @@ const aboutMemberStyle = (e) => {
     aboutMember.style.display = "block";
     aboutMember.style.left = e.clientX + 10 + "px";
     aboutMember.style.top = window.pageYOffset + e.clientY + 20 + "px";
-    console.log(e.clientY / screen.height);
 };
 memberImgArea.addEventListener("mouseout", (e) => {
     aboutMember.style.display = "none";
