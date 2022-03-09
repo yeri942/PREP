@@ -5,6 +5,10 @@
 }
 html {
     scroll-behavior: smooth;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 div#main {
     width: 100%;
