@@ -2,6 +2,8 @@ const logo = document.getElementById("LogoImg");
 const profile = document.getElementById("profile");
 const music = document.getElementById("music");
 const merch = document.getElementById("merch");
+const connect = document.getElementById("connect");
+const footer = document.getElementsByTagName("footer");
 function clickLogo() {
     logo.style.transform = "rotate(0deg)";
     logo.style.width = "60%";
@@ -16,6 +18,8 @@ function clickLogo() {
         profile.style.display = "flex";
         music.style.display = "flex";
         merch.style.display = "flex";
+        connect.style.display = "flex";
+        footer[0].style.display = "flex";
         window.scroll({ top: profile.offsetTop });
     }, 2100);
     setTimeout(() => {

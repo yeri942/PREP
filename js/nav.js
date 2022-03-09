@@ -11,6 +11,7 @@ const gnbMain = document.getElementById("gnbMain");
 const gnbProfile = document.getElementById("gnbProfile");
 const gnbMusic = document.getElementById("gnbMusic");
 const gnbMerch = document.getElementById("gnbMerch");
+const gnbConnect = document.getElementById("gnbConnect");
 
 gnbMain.onclick = () => {
     window.scroll({ top: 0 });
@@ -23,4 +24,7 @@ gnbMusic.onclick = () => {
 };
 gnbMerch.onclick = () => {
     window.scroll({ top: merch.offsetTop });
+};
+gnbConnect.onclick = () => {
+    window.scroll({ top: connect.offsetTop });
 };
