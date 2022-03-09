@@ -6,6 +6,7 @@
     height: 100vh;
     background: linear-gradient(#5b59c2, #7d3fa6);
     color: whitesmoke;
+    padding-bottom: 5.3%;
 }
 #music #title {
     left: 4vh;
