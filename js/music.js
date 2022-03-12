@@ -45,7 +45,7 @@ const changeAlbumInfo = () => {
     LP.classList.remove("rotateLP");
     youtube.src = "";
     youtube.style.display = "none";
-    albumCover.style.display = "block";
+
     musicTitle.textContent = albumList[nowIndex].title;
 };
 prevButton.onclick = () => {
@@ -70,10 +70,8 @@ LP.onclick = () => {
     if (youtube.style.display === "block") {
         youtube.style.display = "none";
         youtube.src = "";
-        albumCover.style.display = "block";
     } else {
         youtube.style.display = "block";
         youtube.src = albumList[nowIndex].src;
-        albumCover.style.display = "none";
     }
 };

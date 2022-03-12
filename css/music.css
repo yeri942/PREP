@@ -57,6 +57,7 @@
 }
 iframe {
     display: none;
+    position: absolute;
     width: 55vh;
     height: 55vh;
     z-index: 88;
@@ -72,7 +73,11 @@ iframe {
     background-color: rgba(0, 0, 0, 0.644);
     align-items: center;
     margin-left: 0;
-    cursor: pointer;
+    cursor: url("/img/cursor.cur"), auto;
+    transition-duration: 0.3s;
+}
+#LP:hover {
+    box-shadow: 0 0 3vh rgba(0, 0, 0, 0.445);
 }
 .rotateLP {
     animation: rotate 10s linear infinite;
