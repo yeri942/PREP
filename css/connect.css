@@ -42,7 +42,7 @@
     transition-duration: 0.5s;
 }
 .facebook:hover {
-    box-shadow: -1vh 1vh 0px #012e64;
+    /* box-shadow: -1vh 1vh 0px #012e64; */
 }
 .instagram {
     /* background: linear-gradient(#833ab4, #fd1d1d, #fcb045); */
