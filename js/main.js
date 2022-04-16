@@ -4,6 +4,8 @@ const music = document.getElementById("music");
 const merch = document.getElementById("merch");
 const connect = document.getElementById("connect");
 const footer = document.getElementsByTagName("footer");
+const sns = document.getElementsByClassName("sns");
+
 clickLogo = () => {
     logo.style.transform = "rotate(0deg)";
     logo.style.width = "60%";
@@ -24,5 +26,13 @@ clickLogo = () => {
     }, 2100);
     setTimeout(() => {
         document.getElementById("goToNextPage").style.display = "none";
+        sns[0].addEventListener("mousemove", (e) => {
+            const clientRect = sns[0].getBoundingClientRect();
+            let center = clientRect.top - clientRect.height / 2;
+            console.log(e.clientX, e.clientY);
+            console.log("요소 좌표 ", clientRect.top - clientRect.height / 2);
+            sns[0].style.boxShadow = `${center - e.clientX} 10px 0px #012e64`;
+            // sns[0].style.boxShadow = `10px 10px 0px #012e64`;
+        });
     }, 3400);
 };
