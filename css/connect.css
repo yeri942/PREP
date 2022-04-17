@@ -39,7 +39,7 @@
 }
 .facebook {
     /* border: 0.5vh solid #0072ff; */
-    transition-duration: 0.5s;
+    /* transition-duration: 0.1s; */
 }
 .facebook:hover {
     /* box-shadow: -1vh 1vh 0px #012e64; */

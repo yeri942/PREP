@@ -28,11 +28,13 @@ clickLogo = () => {
         document.getElementById("goToNextPage").style.display = "none";
         sns[0].addEventListener("mousemove", (e) => {
             const clientRect = sns[0].getBoundingClientRect();
-            let center = clientRect.top - clientRect.height / 2;
+            let verticalCenter = clientRect.top + clientRect.height / 3;
+            let horizonCenter = clientRect.left + clientRect.width / 3;
             console.log(e.clientX, e.clientY);
             console.log("요소 좌표 ", clientRect.top - clientRect.height / 2);
-            sns[0].style.boxShadow = `${center - e.clientX} 10px 0px #012e64`;
-            // sns[0].style.boxShadow = `10px 10px 0px #012e64`;
+            sns[0].style.boxShadow = `${horizonCenter - e.clientX}px ${
+                verticalCenter - e.clientY
+            }px 0px 10px #012e6485`;
         });
     }, 3400);
 };
