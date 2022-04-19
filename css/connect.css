@@ -18,6 +18,7 @@
     display: flex;
     width: 80%;
     justify-content: center;
+    align-items: center;
 }
 #connectContent a {
     margin: 2%;
@@ -25,6 +26,7 @@
     color: inherit;
 }
 .sns {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,6 +34,8 @@
     height: 11vh;
     border-radius: 50%;
     cursor: pointer;
+    overflow: hidden;
+    margin: 0 5vh;
 }
 .fa-brands {
     font-size: 4vh;
@@ -41,27 +45,39 @@
     /* border: 0.5vh solid #0072ff; */
     /* transition-duration: 0.1s; */
 }
-.facebook:hover {
-    /* box-shadow: -1vh 1vh 0px #012e64; */
-}
+
 .instagram {
     /* background: linear-gradient(#833ab4, #fd1d1d, #fcb045); */
-    transition-duration: 0.5s;
+    /* transition-duration: 0.5s; */
 }
-.instagram:hover {
-    box-shadow: -1vh 1vh 0px #0000009f;
-}
+
 .youtube {
     /* background-color: #e52d27; */
-    transition-duration: 0.5s;
+    /* transition-duration: 0.5s; */
 }
-.youtube:hover {
-    box-shadow: -1vh 1vh 0px #9b1914;
-}
+
 .twitter {
     /* background-color: #00acee; */
-    transition-duration: 0.5s;
+    /* transition-duration: 0.5s; */
 }
-.twitter:hover {
-    box-shadow: -1vh 1vh 0px #0a658a;
+
+.bingle {
+    position: absolute;
+    width: 15vh;
+    height: 15vh;
+    background-color: #012e6485;
+    border-radius: 76% 64% 71% 57% / 85% 78% 67% 60%;
+    /* animation: spin 2s infinite; */
+    top: 11vh;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        top: 11vh;
+    }
+    100% {
+        transform: rotate(360deg);
+        top: 0vh;
+    }
 }
