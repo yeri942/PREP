@@ -30,9 +30,7 @@ const snsList = [
     },
 ];
 
-let snsN = 1;
-
-clickLogo = () => {
+const clickLogo = () => {
     logo.style.transform = "rotate(0deg)";
     logo.style.width = "60%";
     logo.style.height = "60vh";
@@ -50,39 +48,43 @@ clickLogo = () => {
         footer[0].style.display = "flex";
         window.scroll({ top: profile.offsetTop });
     }, 2100);
+
     setTimeout(() => {
         document.getElementById("goToNextPage").style.display = "none";
-        sns[snsN].addEventListener("mousemove", (e) => {
-            const clientRect = sns[snsN].getBoundingClientRect();
-            let verticalCenter = clientRect.top + clientRect.height / 2;
-            let horizonCenter = clientRect.left + clientRect.width / 2;
-            console.log(horizonCenter - e.clientX, verticalCenter - e.clientY);
-            let shadowSize =
-                (Math.abs(horizonCenter - e.clientX) +
-                    Math.abs(verticalCenter - e.clientY)) /
-                2;
-            sns[snsN].style.transitionDuration = "0s";
-            sns[snsN].style.boxShadow = `${horizonCenter - e.clientX}px ${
-                verticalCenter - e.clientY
-            }px 0px ${shadowSize}px #012e6485`;
-        });
-        sns[snsN].addEventListener("mouseout", () => {
-            deleteShadow(0);
-        });
-        sns[snsN].addEventListener("click", () => {
-            deleteShadow(0);
-            setTimeout(() => {
-                bingle[snsN].style.animation = "spin 2s infinite";
-            }, 500);
-            setTimeout(() => {
-                window.open("https://www.facebook.com/prepband");
-                bingle[snsN].style.animation = "none";
-            }, 2500);
-        });
     }, 3400);
 };
 
-const deleteShadow = () => {
-    sns[snsN].style.transitionDuration = "0.5s";
-    sns[snsN].style.boxShadow = "0px 0px 0px #012e6485";
+const deleteShadow = (n) => {
+    sns[n].style.transitionDuration = "0.5s";
+    sns[n].style.boxShadow = `0px 0px 0px ${snsList[n].color}`;
+};
+
+const snsNumberChange = (n) => {
+    sns[n].addEventListener("mousemove", (e) => {
+        const clientRect = sns[n].getBoundingClientRect();
+        let verticalCenter = clientRect.top + clientRect.height / 2;
+        let horizonCenter = clientRect.left + clientRect.width / 2;
+        let shadowSize =
+            (Math.abs(horizonCenter - e.clientX) +
+                Math.abs(verticalCenter - e.clientY)) /
+            2;
+        sns[n].style.transitionDuration = "0s";
+        sns[n].style.boxShadow = `${horizonCenter - e.clientX}px ${
+            verticalCenter - e.clientY
+        }px 0px ${shadowSize}px ${snsList[n].color}`;
+    });
+    sns[n].addEventListener("mouseout", () => {
+        deleteShadow(n);
+    });
+    sns[n].addEventListener("click", () => {
+        setTimeout(() => {
+            bingle[n].style.backgroundColor = snsList[n].color;
+            bingle[n].style.animation = "spin 2s infinite";
+        }, 500);
+        setTimeout(() => {
+            window.open(snsList[n].link);
+            bingle[n].style.animation = "none";
+            console.log(2);
+        }, 2500);
+    });
 };
