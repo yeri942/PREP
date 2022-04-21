@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(#f2de74, #9374f2);
+    background: linear-gradient(#f46b6b, #d9af56);
     color: whitesmoke;
 }
 #connect h1 {
@@ -12,7 +12,7 @@
     transform: translateY(-34vh);
     position: absolute;
     font-size: 20vh;
-    color: rgba(125, 125, 125, 0.418);
+    color: rgba(225, 225, 225, 0.418);
 }
 #connectContent {
     display: flex;
@@ -41,33 +41,12 @@
     font-size: 4vh;
     z-index: 100;
 }
-.facebook {
-    /* border: 0.5vh solid #0072ff; */
-    /* transition-duration: 0.1s; */
-}
-
-.instagram {
-    /* background: linear-gradient(#833ab4, #fd1d1d, #fcb045); */
-    /* transition-duration: 0.5s; */
-}
-
-.youtube {
-    /* background-color: #e52d27; */
-    /* transition-duration: 0.5s; */
-}
-
-.twitter {
-    /* background-color: #00acee; */
-    /* transition-duration: 0.5s; */
-}
 
 .bingle {
     position: absolute;
     width: 15vh;
     height: 15vh;
-    background-color: #012e6485;
     border-radius: 76% 64% 71% 57% / 85% 78% 67% 60%;
-    /* animation: spin 2s infinite; */
     top: 11vh;
 }
 
@@ -79,5 +58,21 @@
     100% {
         transform: rotate(360deg);
         top: 0vh;
+    }
+}
+
+@-webkit-keyframes instaSpin {
+    0% {
+        transform: rotate(0deg);
+        top: 11vh;
+        background-color: #72488f;
+    }
+    60% {
+        background-color: #c92d54;
+    }
+    100% {
+        transform: rotate(360deg);
+        top: 0vh;
+        background-color: #ffc258;
     }
 }

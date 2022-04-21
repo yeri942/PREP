@@ -10,22 +10,22 @@ const bingle = document.getElementsByClassName("bingle");
 const snsList = [
     {
         name: "facebook",
-        color: "#012e6485",
+        color: "#3b5998",
         link: "https://www.facebook.com/prepband",
     },
     {
         name: "instagram",
-        color: "#0000009f",
+        color: "#72488f",
         link: "https://www.instagram.com/prepband",
     },
     {
         name: "youtube",
-        color: "#9b1914",
+        color: "#c4302b",
         link: "https://www.youtube.com/channel/UCphD5BdaBNVJxbH8XZKLDqg",
     },
     {
         name: "twitter",
-        color: "#0a658a",
+        color: "#00acee",
         link: "https://twitter.com/prep_band",
     },
 ];
@@ -78,7 +78,11 @@ const clickSnsIcon = (n) => {
     deleteShadow(n);
     setTimeout(() => {
         bingle[n].style.backgroundColor = snsList[n].color;
-        bingle[n].style.animation = "spin 2s infinite";
+        if (n === 1) {
+            bingle[n].style.animation = "instaSpin 2s alternate";
+        } else {
+            bingle[n].style.animation = "spin 2s alternate";
+        }
     }, 500);
     setTimeout(() => {
         window.open(snsList[n].link);
@@ -86,6 +90,3 @@ const clickSnsIcon = (n) => {
         console.log(2);
     }, 2500);
 };
-
-// sns[n].addEventListener("mouseout", deleteShadow);
-// sns[n].addEventListener("click", clickSnsIcon);
