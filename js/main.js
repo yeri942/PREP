@@ -54,11 +54,6 @@ const clickLogo = () => {
     }, 3400);
 };
 
-const deleteShadow = (n) => {
-    sns[n].style.transitionDuration = "0.5s";
-    sns[n].style.boxShadow = `0px 0px 0px ${snsList[n].color}`;
-};
-
 const snsNumberChange = (n) => {
     sns[n].addEventListener("mousemove", (e) => {
         const clientRect = sns[n].getBoundingClientRect();
@@ -73,18 +68,24 @@ const snsNumberChange = (n) => {
             verticalCenter - e.clientY
         }px 0px ${shadowSize}px ${snsList[n].color}`;
     });
-    sns[n].addEventListener("mouseout", () => {
-        deleteShadow(n);
-    });
-    sns[n].addEventListener("click", () => {
-        setTimeout(() => {
-            bingle[n].style.backgroundColor = snsList[n].color;
-            bingle[n].style.animation = "spin 2s infinite";
-        }, 500);
-        setTimeout(() => {
-            window.open(snsList[n].link);
-            bingle[n].style.animation = "none";
-            console.log(2);
-        }, 2500);
-    });
 };
+
+const deleteShadow = (n) => {
+    sns[n].style.transitionDuration = "0.5s";
+    sns[n].style.boxShadow = `0px 0px 0px ${snsList[n].color}`;
+};
+const clickSnsIcon = (n) => {
+    deleteShadow(n);
+    setTimeout(() => {
+        bingle[n].style.backgroundColor = snsList[n].color;
+        bingle[n].style.animation = "spin 2s infinite";
+    }, 500);
+    setTimeout(() => {
+        window.open(snsList[n].link);
+        bingle[n].style.animation = "none";
+        console.log(2);
+    }, 2500);
+};
+
+// sns[n].addEventListener("mouseout", deleteShadow);
+// sns[n].addEventListener("click", clickSnsIcon);
